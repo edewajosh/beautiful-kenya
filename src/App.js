@@ -1,10 +1,17 @@
-
+import {Routes, Route} from "react-router-dom"
+import Login from "./pages/Login";
+import Packages from "./pages/Packages";
+import SignUp from "./pages/SignUp";
 
 const App = () =>{
   return (
-    <div className="App">
-      <h1>Hello Beautiful Kenya</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Packages/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+      </Routes>
+    </>
   );
 }
 
